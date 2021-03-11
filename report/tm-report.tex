@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{lipsum} 
+\usepackage{natbib}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{url}
+
+
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{subfig}
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{1em}
+\begin{document}
+	
+	\def\code#1{\texttt{#1}}
+	\input{title-page.tex}
+	\input{abstract.tex}
+	
+	\newpage
+	\tableofcontents
+	
+	\newpage
+	\input{intro.tex}
+	\input{theory.tex}
+	\newpage
+	\input{data.tex}
+	\newpage
+	\input{method.tex}
+	\newpage
+	\input{results.tex}
+	\newpage
+	\input{discussion.tex}
+	\input{conclusion.tex}
+	\section{Appendix: Code and data} \label{appendix}
+	
+	The preprocessed data and code used in the making of this report can be found in this \href{https://github.com/cosmourao/sarcasm-tm}{\color{blue}{repository}}.
+	\bibliography{references}
+	\bibliographystyle{apalike}
+\end{document}
+
+

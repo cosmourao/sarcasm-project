@@ -1,0 +1,23 @@
+\thispagestyle{plain}
+
+\section{Introduction}
+
+The Cambridge Dictionary of English defines sarcasm as "the use of remarks that clearly mean the opposite of what they say, made in order to hurt someone's feelings or to criticize something in a humorous way". From a human perspective, the detection of sarcasm in speech is natural to most. However, human interaction involves much more than the words themselves: volume, tone, context, etc. It can be argued that sarcasm in text form is more difficult to be detected even by humans as many of the former social cues are absent.
+
+From the natural language processing  (NLP) perspective, sarcasm is a challenging problem, specially for sentiment analysis \citep{patro2019}. This is partially due to the nature of sarcasm itself: positive words with negative connotation and \textit{vice versa}, and partially to the lack of good labelled datasets \citep{gonzalez2011}.  Sarcasm identification tools are of interest for companies and individuals alike as a mean of correctly identifying one's target audience true opinions. It is desired, therefore, to deploy efficient models to correctly classify sarcasm.
+
+The very first step into implementing a text classifier is converting raw text into a numerical representation that can be interpreted by a computer, i.e. a numerical vector. There are several ways of achieving this.
+
+A simple, common approach  is to compute Term Frequency–Inverse Document Frequency (TF-IDF) of a corpus. Each term is assigned a weight based on its frequencies in documents and in corpus. It is also known as a \textit{bag-of-words} model, as word order, context and semantics do not matter \citep{manning2008introduction}.
+
+A more sophisticated option is the Word2Vec model, in particular the Continuous-Bag-of-Words (CBOW) architecture, a neural network designed to predict a current word based on surrounding words, i.e. context \citep{mikolov2013efficient}. This model implements word embeddings so that semantic relations between words are preserved \citep{mikolov2013efficient}. Although the word \textit{context} is used here, this model does not capture contextual embeddings, i.e. it only learns static vector representation for each word, independent of context \citep{ethayarajh2020}. As an example, the word \textit{apple} in the sentences "I ate an apple" and "I wish I had an Apple computer" would have the same vector representation, even though they mean completely different things.
+
+More recently, transformer architectures have achieved impressive results due to its parallelization capabilities \citep{vaswani2017attention}. Bidirectional Encoder Representations from Transformers (BERT) uses a bidirectional transformer to pre-train text representations that are context-sensitive, unlike Word2Vec \citep{devlin2019ppt}. In the previous example, the word \textit{apple} would have two different vector representation: one representing the food and another representing the tech company.
+
+Given this, it seems reasonable to think that context-sensitive models would outperform context-insensitive models in sarcasm detection. These models will be discussed in more detail in the following section.
+
+The aim of this work is not to achieve state-of-the-art classification metrics, but rather investigate different text vectorizations and their impact on classification performance of sarcasm. This project was chosen as a compliment to the Text Mining course content due to its interesting nature and to have an introductory contact with more complex word embeddings/language models.
+
+
+	
+

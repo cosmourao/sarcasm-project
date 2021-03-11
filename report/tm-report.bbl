@@ -1,0 +1,95 @@
+\begin{thebibliography}{}
+
+\bibitem[Alammar, 2019]{alammar2019}
+Alammar, J. (2019).
+\newblock A visual guide to using bert for the first time.
+\newblock {\em Jay Alammar's personal Blog}.
+
+\bibitem[Chaubard et~al., 2016]{chaubard2016}
+Chaubard, F., Mundar, R., and Socher, R. (2016).
+\newblock Cs 224d: Deep learning for nlp.
+\newblock Lecture Notes: Part I. Standford University.
+
+\bibitem[Devlin, 2019]{devlin2019ppt}
+Devlin, J. (2019).
+\newblock Contextual word representations with bert and other pre-trained
+  language models.
+\newblock Powerpoint presentation. Standford University.
+
+\bibitem[Devlin et~al., 2019]{devlin2019bert}
+Devlin, J., Chang, M.-W., Lee, K., and Toutanova, K. (2019).
+\newblock Bert: Pre-training of deep bidirectional transformers for language
+  understanding.
+
+\bibitem[Ethayarajh, 2020]{ethayarajh2020}
+Ethayarajh, K. (2020).
+\newblock Bert, elmo, gpt-2: How contextual are contextualized word
+  representations?
+\newblock {\em The Stanford AI Lab Blog}.
+
+\bibitem[Gonz{\'a}lez-Ib{\'a}nez et~al., 2011]{gonzalez2011}
+Gonz{\'a}lez-Ib{\'a}nez, R., Muresan, S., and Wacholder, N. (2011).
+\newblock Identifying sarcasm in twitter: a closer look.
+\newblock In {\em Proceedings of the 49th Annual Meeting of the Association for
+  Computational Linguistics: Human Language Technologies}, pages 581--586.
+
+\bibitem[Halthor, 2020]{halthor2020}
+Halthor, A. (2020).
+\newblock Bert neural network - explained!
+\newblock \url{https://www.youtube.com/watch?v=xI0HHN5XKDo}.
+
+\bibitem[Honnibal et~al., 2020]{spacy}
+Honnibal, M., Montani, I., Van~Landeghem, S., and Boyd, A. (2020).
+\newblock {spaCy: Industrial-strength Natural Language Processing in Python}.
+
+\bibitem[Hsu et~al., 2003]{hsu2003}
+Hsu, C.-W., Chang, C.-C., Lin, C.-J., et~al. (2003).
+\newblock A practical guide to support vector classification.
+
+\bibitem[Kuhlmann, 2020]{kuhlmann-lec2-2020}
+Kuhlmann, M. (2020).
+\newblock Text classification.
+\newblock 732A92/TDDE16 Text Mining lecture slides, Linköping University.
+
+\bibitem[Manning et~al., 2008]{manning2008introduction}
+Manning, C.~D., Raghavan, P., and Schütze, H. (2008).
+\newblock {\em Introduction to Information Retrieval}.
+\newblock Cambridge University Press, Cambridge, UK.
+
+\bibitem[Mikolov et~al., 2013]{mikolov2013efficient}
+Mikolov, T., Chen, K., Corrado, G., and Dean, J. (2013).
+\newblock Efficient estimation of word representations in vector space.
+
+\bibitem[Misra and Arora, 2019]{misra2019sarcasm}
+Misra, R. and Arora, P. (2019).
+\newblock Sarcasm detection using hybrid neural network.
+\newblock {\em arXiv preprint arXiv:1908.07414}.
+
+\bibitem[Patro et~al., 2019]{patro2019}
+Patro, J., Bansal, S., and Mukherjee, A. (2019).
+\newblock A deep-learning framework to detect sarcasm targets.
+\newblock In {\em Proceedings of the 2019 Conference on Empirical Methods in
+  Natural Language Processing and the 9th International Joint Conference on
+  Natural Language Processing (EMNLP-IJCNLP)}, pages 6337--6343.
+
+\bibitem[Peña, 2019]{pena2019}
+Peña, J.~M. (2019).
+\newblock Lecture 3b block 1: Support vector machines.
+\newblock 732A99/TDDE01 Machine Learning lecture slides, Linköping University.
+
+\bibitem[Potamias et~al., 2020]{potamias2020}
+Potamias, R.~A., Siolas, G., and Stafylopatis, A.~G. (2020).
+\newblock A transformer-based approach to irony and sarcasm detection.
+\newblock {\em Neural Computing and Applications}, 32(23):17309–17320.
+
+\bibitem[Sanh et~al., 2020]{sanh2020distilbert}
+Sanh, V., Debut, L., Chaumond, J., and Wolf, T. (2020).
+\newblock Distilbert, a distilled version of bert: smaller, faster, cheaper and
+  lighter.
+
+\bibitem[Vaswani et~al., 2017]{vaswani2017attention}
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.~N.,
+  Kaiser, L., and Polosukhin, I. (2017).
+\newblock Attention is all you need.
+
+\end{thebibliography}

@@ -1,0 +1,11 @@
+\thispagestyle{plain}
+
+\section{Discussion}
+
+From the results of the previous section, it is evident that more powerful algorithms/models yield best classification results. This is specially the case for distilBERT, who achieved the highest accuracy of all tested methods. This can be explained by context capturing (via positional embeddings), which distilBERT does while the other methods do not. Still, CBOW achieved relatively good metrics. On the other hand, distilBERT was significantly more computationally heavy: this is considered a small dataset and even with a small 25 tokenized dimensions, the evaluation took almost an hour to train. Of course, the use of parallelization (which is highly recommended) was not used, which in itself could be an improvement for next projects/larger corpora.
+
+One clear limitation of the work is in the data itself. The fact that a headline comes from a "serious" news website does not imply the absence of sarcasm. Sarcasm is a good communication tool to transmit opinion and is wildly used throughout media, serious or not. As an improvement, more traditional sarcasm datasets could be used to compare with previous work, such as the Twitter and/or Reddit corpus.
+
+Another limitation was the somewhat simple conduction of experiments: a lot more could have been done in terms of hyperparameter tuning, both for the vectorization/embeddings and for the classifier. Some examples of this could be vocabulary size in TF-IDF, different tokenization dimensions, and number hidden layers/attention heads in distilBERT. Also other classifiers could have been used for comparison.
+
+The biggest limitation, however, was that the distilBERT model was not fine-tuned for this task.  It is believed the even better accuracy could have been achieved with it. Nonetheless, the higher performance of transformer models in figurative language detection is not surprising, as evidenced in \citep{potamias2020}.

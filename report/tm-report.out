@@ -1,0 +1,16 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Theory}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Term Frequency-Inverse Document Frequency}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Word2Vec: Continuous-Bag-of-Words}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{\(Distil\)BERT for single sequence classification}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Linear Support Vector Classification}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{Data}{}% 7
+\BOOKMARK [1][-]{section.4}{Method}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{Baseline: Random chance}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{TF-IDF}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.3}{Word2Vec - CBOW}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.4}{DistilBERT}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Results}{}% 13
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 14
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 15
+\BOOKMARK [1][-]{section.8}{Appendix: Code and data}{}% 16

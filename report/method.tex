@@ -1,0 +1,57 @@
+\thispagestyle{plain}
+
+\section{Method}
+
+In this section there will be details on how the study was carried, such as packages, pre-trained models and functions used. For all methods, the same training and test sets were used: 67\% of headlines were used for training and 33\% for testing. A fixed random seed of 42 ensures the reproducibility of results throughout the different methods. 
+
+Stop word removal and lemmatization were initially tested, but yielded worse results than the raw text. For this reason, no special pre-processing of text was used.
+
+All methods are made of some type of vectorization of text and then fed to a \code{LinearSVC} classifier. Accuracy, recall and F1 scores were computed using Scikit-Learn's  \code{classification\_report}. Additionally, the \code{plot\_confusion\_matrix} was used to visualize the results. For even more details on coding, the reader is referred to Section ~\ref{appendix} - Appendix.
+
+\subsection{Baseline: Random chance}
+
+The use of Scikit-Learn's \code{DummyClassifier} and \code{Pipeline} tools made this evaluation straightforward. The classifier was configured to the default stratified method, i.e. it will respect the class distribution (as stated previously, 52,36\% not sarcastic and 47,64\% sarcastic). After the instantiation of the pipeline, it was just a matter of fitting the classifier to training data and predicting on test data via the methods \code{pipeline.fit} and \code{pipeline.predict}.
+
+\subsection{TF-IDF}
+
+The key tool used in this section was Scikit-Learn's \code{TfidfVectorizer} function inside the pipeline. The \code{max\_features} and \code{ngram\_range} were set to 1000 and (1,2), respectively. The first parameter will only retrieve the top 1000 words in term frequency, while the second parameter will extract unigrams and bigrams from the corpus. After that, the classification routine proceeds as usual.
+
+\subsection{Word2Vec - CBOW}
+
+To extract Word2Vec embeddings, the spaCy library was used. The pre-trained pipeline \code{en\_core\_web\_lg} comes with built-in, 300 dimensional, word vectors. Every document (i.e. headline) was vectorized as the average of their token vectors \citep{spacy} and fed to the classifier.
+
+ \subsection{DistilBERT}
+ 
+ Pre-trained tokenizer and model were used in this section. More specifically, Hugging Face's \code{distilbert-base-uncased} model. The steps involved were adapted from \cite{alammar2019}.
+ 
+ The tokenizer step preparess text to be fed to the distilBERT network. More importantly, it adds the special [CLS] (which has an id of [101]) token at the beginning of every sequence, which will be crucial to classification later on. Given the average word count in all headlines was around 10 words/headline and that the vast majority of headlines were 12 words or shorter as seen on Table~\ref{table:stats}, an embedding dimension of 25 was chosen as a good compromise between shorter and longer headlines. That way, shorter headlines will be padded with zeroes and longer headlines will be truncated. distilBERT's tokenizer not only tokenize words, but it will also split words into pieces (wordpiece tokenization).
+ 
+ \begin{longtable}[]{p{5cm}lp{}}
+ 	\toprule
+ 	\centering Statistics & \centering Value \tabularnewline
+ 	\midrule
+ 	\endhead
+ 	Headlines & 28619 \tabularnewline
+ 	Average words per headline & 10.05 \tabularnewline
+ 	Standard deviation & 3.39  \tabularnewline
+ 	Min & 2 \tabularnewline
+ 	25\% & 8  \tabularnewline
+ 	50\% & 10 \tabularnewline
+ 	75\% & 12 \tabularnewline
+ 	Max & 151 \tabularnewline
+ 	
+ 	\bottomrule
+ 	\caption{Descriptive statistics of sentences.}
+ 	\label{table:stats}
+ \end{longtable}
+ 
+ 
+ An example of tokenization is as follows:
+ 
+||A raw text headline: \code{thirtysomething scientists unveil doomsday clock of hair loss}
+
+|| This is the (wordpiece) tokenized headline, padded: \code{['[CLS]', 'thirty', '\#\#some', '\#\#thing', 'scientists', 'un', '\#\#ve', '\#\#il', 'doom', '\#\#sd', '\#\#ay', 'clock', 'of', 'hair', 'loss', '[SEP]', '[PAD]', '[PAD]', '[PAD]', '[PAD]', '[PAD]', '[PAD]', '[PAD]', '[PAD]', '[PAD]']}
+ 
+ ||This is the token ID headline, padded:  \code{[101, 4228, 14045, 20744, 6529, 4895, 3726, 4014, 12677, 16150, 4710, 5119, 1997, 2606, 3279, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+ 
+ The token id vectors were then fed to the distilBERT network. For every input (token id), 768 hidden units were outputted. The only hidden units of interest here are the ones tied to the [CLS] token. After slicing the output tensor to retrieve those units, they were then fed to the classifier.  
