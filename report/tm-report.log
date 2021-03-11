@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.16)  11 MAR 2021 13:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.16)  11 MAR 2021 19:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -433,41 +433,59 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `tm-report.toc'.
 
  [2] (./intro.tex) (./theory.tex [3]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 26.
+
+Overfull \hbox (27.34825pt too wide) in paragraph at lines 30--31
+[]\OT1/cmr/m/n/10 The con-text words are first en-coded into one-hot vec-tors $
+\OML/cmm/m/it/10 x[]; x[]; :::; x[]; x[]; :::; x[]; x[]$\OT1/cmr/m/n/10 .
+ []
+
 [4]
 <../img/cbow.png, id=165, 216.81pt x 276.03125pt>
 File: ../img/cbow.png Graphic file (type png)
 <use ../img/cbow.png>
-Package pdftex.def Info: ../img/cbow.png  used on input line 65.
+Package pdftex.def Info: ../img/cbow.png  used on input line 76.
 (pdftex.def)             Requested size: 173.44534pt x 220.83371pt.
- [5 <../img/cbow.png>]
-<../img/embeddings.png, id=189, 1149.29375pt x 341.275pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5]
+<../img/embeddings.png, id=192, 1149.29375pt x 341.275pt>
 File: ../img/embeddings.png Graphic file (type png)
 <use ../img/embeddings.png>
-Package pdftex.def Info: ../img/embeddings.png  used on input line 80.
+Package pdftex.def Info: ../img/embeddings.png  used on input line 91.
 (pdftex.def)             Requested size: 260.17464pt x 77.25743pt.
-<../img/BERT-class.png, id=190, 424.58624pt x 382.42876pt>
+<../img/BERT-class.png, id=193, 424.58624pt x 382.42876pt>
 File: ../img/BERT-class.png Graphic file (type png)
 <use ../img/BERT-class.png>
-Package pdftex.def Info: ../img/BERT-class.png  used on input line 82.
+Package pdftex.def Info: ../img/BERT-class.png  used on input line 93.
 (pdftex.def)             Requested size: 173.44534pt x 156.22493pt.
- [6 <../img/embeddings.png> <../img/BERT-class.png>])
-[7] (./data.tex
-<../img/huffpost.png, id=238, 244.915pt x 274.02374pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6 <../img/cbow.png>]) [7 <../img/embeddings.png> <../img/BERT-class.png>]
+(./data.tex
+<../img/huffpost.png, id=242, 244.915pt x 274.02374pt>
 File: ../img/huffpost.png Graphic file (type png)
 <use ../img/huffpost.png>
 Package pdftex.def Info: ../img/huffpost.png  used on input line 9.
 (pdftex.def)             Requested size: 186.45341pt x 208.6198pt.
-<../img/the-onion.png, id=239, 318.18875pt x 307.1475pt>
+<../img/the-onion.png, id=243, 318.18875pt x 307.1475pt>
 File: ../img/the-onion.png Graphic file (type png)
 <use ../img/the-onion.png>
 Package pdftex.def Info: ../img/the-onion.png  used on input line 11.
 (pdftex.def)             Requested size: 216.81pt x 209.28401pt.
-<../img/counts.png, id=243, 538.01pt x 353.32pt>
+<../img/counts.png, id=247, 538.01pt x 353.32pt>
 File: ../img/counts.png Graphic file (type png)
 <use ../img/counts.png>
 Package pdftex.def Info: ../img/counts.png  used on input line 30.
 (pdftex.def)             Requested size: 216.81pt x 142.38217pt.
-<../img/freq.png, id=244, 515.9275pt x 353.32pt>
+<../img/freq.png, id=248, 515.9275pt x 353.32pt>
 File: ../img/freq.png Graphic file (type png)
 <use ../img/freq.png>
 Package pdftex.def Info: ../img/freq.png  used on input line 32.
@@ -486,31 +504,31 @@ Overfull \hbox (23.12602pt too wide) in paragraph at lines 53--54
  []
 
 ) [11] (./results.tex
-<../img/dummy-cm.png, id=286, 504.88625pt x 353.32pt>
+<../img/dummy-cm.png, id=290, 504.88625pt x 353.32pt>
 File: ../img/dummy-cm.png Graphic file (type png)
 <use ../img/dummy-cm.png>
 Package pdftex.def Info: ../img/dummy-cm.png  used on input line 27.
 (pdftex.def)             Requested size: 199.16928pt x 139.37926pt.
-<../img/tfidf-cm.png, id=287, 504.88625pt x 351.3125pt>
+<../img/tfidf-cm.png, id=291, 504.88625pt x 351.3125pt>
 File: ../img/tfidf-cm.png Graphic file (type png)
 <use ../img/tfidf-cm.png>
 Package pdftex.def Info: ../img/tfidf-cm.png  used on input line 27.
 (pdftex.def)             Requested size: 199.16928pt x 138.58733pt.
-<../img/w2v-cm.png, id=288, 504.88625pt x 351.3125pt>
+<../img/w2v-cm.png, id=292, 504.88625pt x 351.3125pt>
 File: ../img/w2v-cm.png Graphic file (type png)
 <use ../img/w2v-cm.png>
 Package pdftex.def Info: ../img/w2v-cm.png  used on input line 29.
 (pdftex.def)             Requested size: 199.16928pt x 138.58733pt.
-<../img/bert-cm.png, id=289, 504.88625pt x 351.3125pt>
+<../img/bert-cm.png, id=293, 504.88625pt x 351.3125pt>
 File: ../img/bert-cm.png Graphic file (type png)
 <use ../img/bert-cm.png>
 Package pdftex.def Info: ../img/bert-cm.png  used on input line 29.
 (pdftex.def)             Requested size: 199.16928pt x 138.58733pt.
 ) [12 <../img/dummy-cm.png> <../img/tfidf-cm.png> <../img/w2v-cm.png> <../img/b
 ert-cm.png>] (./discussion.tex) (./conclusion.tex)
-(./tm-report.bbl [13])
+(./tm-report.bbl [13] [14])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
- [14]
+ [15]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 45.
  (./tm-report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
@@ -520,32 +538,35 @@ Package rerunfilecheck Info: File `tm-report.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 8657 strings out of 480608
- 141555 string characters out of 5903630
- 508803 words of memory out of 5000000
- 24309 multiletter control sequences out of 15000+600000
- 536927 words of font info for 39 fonts, out of 8000000 for 9000
+ 8677 strings out of 480608
+ 141771 string characters out of 5903630
+ 508883 words of memory out of 5000000
+ 24320 multiletter control sequences out of 15000+600000
+ 538451 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,12n,51p,1168b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,12n,51p,1168b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
 /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></u
 sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on tm-report.pdf (15 pages, 1100592 bytes).
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on tm-report.pdf (16 pages, 1128513 bytes).
 PDF statistics:
- 383 PDF objects out of 1000 (max. 8388607)
- 322 compressed objects within 4 object streams
- 74 named destinations out of 1000 (max. 500000)
+ 403 PDF objects out of 1000 (max. 8388607)
+ 338 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 500000)
  184 words of extra memory for PDF output out of 10000 (max. 10000000)
 

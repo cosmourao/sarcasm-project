@@ -23,50 +23,61 @@ Finally, TF-IDF is defined in Equation~\ref{eqn:tfidf} as the product of TF and 
 
 \subsection{Word2Vec: Continuous-Bag-of-Words}
 
-The main objective of CBOW is to predict a word  $x_{target}$ based on surrounding words in a given window. This is achieved by first encoding the $i^{th}$ context words into their one-hot word vectors denoted by $x^{(i)}$. Then, each vector gets embedded into a vector $v_i$ by the input word matrix \textbf{V} via Equation~\ref{eqn:w2vembed} \citep{chaubard2016}.
+The main goal of Word2Vec is to produce numerical representations of words such that similar words are closer to each other and dissimilar words are far apart. There are two models inside the Word2Vec family: Continuous-Bag-of-Words (CBOW) and skip-gram. This report will focus on the former \footnote{Note: this theory explanation was based on \citep{ghodsi20171} and \citep{ghodsi20172}.}
 
+The main objective of CBOW is to predict a target word  $w_t$ based on surrounding words in a given window, called context words $w_{t-m}, w_{t-m + 1}, ... ,w_{t-1}, w_{t+1}, ..., w_{t+m-1}, w_{t+m}$, where $m$ is the windows size.
+
+The context words are first encoded into one-hot vectors $x_{t-m}, x_{t-m + 1}, ... ,x_{t-1}, x_{t+1}, ..., x_{t+m-1}, x_{t+m}$. The dimension of each vector is [$d \times1$] where $d$ is the number of words in the vocabulary.
+
+Next, all context words are averaged by a  matrix os weights $\mathbf{W}$ such that a overall context vector $v_c$ is extracted.
+ 
 \begin{equation}
-	\label{eqn:w2vembed}
-	v_i = \mathbf{V}x^{(i)}
+	\label{eqn:hidden}
+	v_c= \mathbf{W}^T \mathbf{x}
 \end{equation}
 
-Then, these vectors get averaged over all context window \textit{w} into one vector $\hat{v}$ (hence the bag-of-words notation, i.e. order does not matter.) by Equation~\ref{eqn:w2vavg}. \cite{mikolov2013efficient} refers to this as the projection step.
+The context vector $v_c$, sequentially, gets projected back into a d dimensional space via a different weight matrix $\mathbf{W'}$. This new vector is named $u$. 
 
 \begin{equation}
-	\label{eqn:w2vavg}
-	\hat{v} = \frac{\sum_{i=1}^{w} v_i}{w}
+	\label{eqn:hidden2}
+	u = \mathbf{W'}^T v_c
 \end{equation}
 
-Then, this projected vector is weighted by the output word matrix \textbf{U}. This gives us a score vector \textit{z} as in Equation~\ref{eqn:w2vscore}.
+Each entry of this vector, $u_i$ can be written as the product of a word vector $v_w$ times the context vector $v_c$:
 
 \begin{equation}
-	\label{eqn:w2vscore}
-	z = \mathbf{U}\hat{v}
+	\label{eqn:hidden3}
+	u_i = v_w^T v_c
 \end{equation}
 
-These scores are turned into probabilities via a \textit{softmax} layer (Equation~\ref{eqn:w2vsoftmax}).
+Finally, the vector u is fed to a softmax layer where the output vector $y$ is obtained, which is a probability vector such that it respects Equation~\ref{eqn:w2prob}. Each entry $y_i$ is the probability of a word given the context as seen on Equation~\ref{probs}.
 
 \begin{equation}
-	\label{eqn:w2vsoftmax}
-	\hat{y} = \mathnormal{softmax}(z)
+	\label{eqn:w2prob}
+	\sum_i y_i = 1
 \end{equation}
 
-And the main objective is learn \textbf{V} and  \textbf{U} so it minimizes the loss function given by Equation~\ref{eqn:w2vobj}.
+\begin{equation}
+	\label{probs}
+	y_i = p(w|c) = \textnormal{softmax}(u_i) = \frac{e^{v^T _cv_w}}{\sum_w e^{v^T _cv_w}}
+\end{equation}
+
+The training objective is to find $v_w$, $v_c$ such it maximizes the log-likelihood of
 
 \begin{equation}
-	\label{eqn:w2vobj}
-L = -\sum_{i=1}^{w} \log P(x_{target}|x^{i}, ..., x^{w})
+	\label{llik}
+	L(v_w, v_c) = \sum_w v_c^T v_w - \log \sum_w e^{v_c^T v_w}
 \end{equation}
 
 The model can be summarized in Figure~\ref{cbow}.
 
-\begin{figure}[!h]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.4\textwidth]{../img/cbow.png}
 	\caption{CBOW model \citep{mikolov2013efficient}.}
 	\label{cbow}
 \end{figure}
-
+ \newpage
 \subsection{(Distil)BERT for single sequence classification}
 
 Transformer networks took the world by storm due to its paralellization capabilities and toppled established architectures such as LSTMs with new state of the art scores in several NLP tasks. While a traditional transformer has encoder and decoder blocks, Bidirectional Encoder Representation from Transformers (BERT), as the name suggests, only has encoder blocks \citep{halthor2020}. The BERT architecture is pre-trained with huge corpora such the BookCorpus (800M words) and English Wikipedia (2,500M words) \citep{devlin2019bert}.

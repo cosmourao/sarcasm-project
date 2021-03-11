@@ -5,11 +5,6 @@ Alammar, J. (2019).
 \newblock A visual guide to using bert for the first time.
 \newblock {\em Jay Alammar's personal Blog}.
 
-\bibitem[Chaubard et~al., 2016]{chaubard2016}
-Chaubard, F., Mundar, R., and Socher, R. (2016).
-\newblock Cs 224d: Deep learning for nlp.
-\newblock Lecture Notes: Part I. Standford University.
-
 \bibitem[Devlin, 2019]{devlin2019ppt}
 Devlin, J. (2019).
 \newblock Contextual word representations with bert and other pre-trained
@@ -26,6 +21,16 @@ Ethayarajh, K. (2020).
 \newblock Bert, elmo, gpt-2: How contextual are contextualized word
   representations?
 \newblock {\em The Stanford AI Lab Blog}.
+
+\bibitem[Ghodsi, 2017a]{ghodsi20171}
+Ghodsi, A. (2017a).
+\newblock Ali ghodsi, lec 12: Neural networks, autoencoders, word2vec.
+\newblock \url{https://youtu.be/syWB-YMYZvI}.
+
+\bibitem[Ghodsi, 2017b]{ghodsi20172}
+Ghodsi, A. (2017b).
+\newblock Ali ghodsi, lec 13: Word2vec skip-gram.
+\newblock \url{https://youtu.be/GMCwS7tS5ZM}.
 
 \bibitem[Gonz{\'a}lez-Ib{\'a}nez et~al., 2011]{gonzalez2011}
 Gonz{\'a}lez-Ib{\'a}nez, R., Muresan, S., and Wacholder, N. (2011).

@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {2}Theory}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Term Frequency-Inverse Document Frequency}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Word2Vec: Continuous-Bag-of-Words}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}(Distil)BERT for single sequence classification}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}(Distil)BERT for single sequence classification}{6}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Linear Support Vector Classification}{7}{subsection.2.4}%
 \contentsline {section}{\numberline {3}Data}{8}{section.3}%
 \contentsline {section}{\numberline {4}Method}{10}{section.4}%
